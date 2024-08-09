@@ -1,0 +1,60 @@
+{
+    "name": "Azure OpenAI - Async Python Agents",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "args": {
+            "VARIANT": "bullseye",
+            "VERSION": "3.12"
+        }
+    },
+    "features": {
+        "ghcr.io/devcontainers/features/azure-cli:1": {
+            "version": "2.62.0"
+        },
+        "ghcr.io/devcontainers/features/github-cli:1": {
+            "version": "2"
+        },
+        "ghcr.io/devcontainers/features/conda:1": {}
+    },
+    "customizations": {
+        "vscode": {
+            
+        },
+        "codespaces": {
+            "extensions": [
+                "ms-azuretools.azure-dev",
+                "ms-azuretools.vscode-bicep",
+                "ms-azuretools.vscode-docker",
+                "ms-toolsai.jupyter",
+                "ms-python.black-formatter",
+                "ms-python.python",
+                "ms-vscode.vscode-node-azure-pack",
+                "ms-vscode.js-debug",
+                "esbenp.prettier-vscode",
+                "dbaeumer.vscode-eslint",
+                "ms-azuretools.vscode-azurefunctions",
+                "github.vscode-github-actions",
+                "GitHub.copilot-nightly",
+                "vscode-icons-team.vscode-icons"
+            ],
+            "openFiles": [
+                "main.py"
+            ]
+        }
+    },
+    "forwardPorts": [
+        8000
+    ],
+    "postAttachCommand": "",
+    "postCreateCommand": "pip3 install --user -r requirements.txt",
+    "remoteUser": "vscode",
+    "hostRequirements": {
+        "memory": "8gb",
+        "cpus": 4
+    },
+    "portsAttributes": {
+        "8000": {
+            "label": "Streamlit UI
+        }
+    }
+}
