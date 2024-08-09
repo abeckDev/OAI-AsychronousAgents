@@ -18,9 +18,9 @@
     },
     "customizations": {
         "vscode": {
-            
-        },
-        "codespaces": {
+            "settings": {
+                "workbench.iconTheme": "vscode-icons"
+            },
             "extensions": [
                 "ms-azuretools.azure-dev",
                 "ms-azuretools.vscode-bicep",
@@ -36,7 +36,9 @@
                 "github.vscode-github-actions",
                 "GitHub.copilot-nightly",
                 "vscode-icons-team.vscode-icons"
-            ],
+            ]
+        },
+        "codespaces": {
             "openFiles": [
                 "main.py"
             ]
@@ -54,7 +56,7 @@
     },
     "portsAttributes": {
         "8000": {
-            "label": "Streamlit UI
+            "label": "Streamlit UI"
         }
     }
 }
